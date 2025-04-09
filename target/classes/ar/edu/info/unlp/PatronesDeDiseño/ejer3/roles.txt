@@ -1,0 +1,4 @@
+Mediaplayer --> Cliente
+Target -> Media
+Adapter -> VideoStreamAdapter
+Adaptee -> VideoStream
