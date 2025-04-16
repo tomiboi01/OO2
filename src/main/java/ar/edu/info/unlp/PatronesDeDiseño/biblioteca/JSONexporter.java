@@ -6,17 +6,17 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 
-public class JSONexporter {
+public class JSONexporter extends VoorheesExporter{
 
-    private String exportar(Socio s)
-    {
-        JSONObject jsonObject = new JSONObject();
-        jsonObject.put("nombre", s.getNombre());
-        jsonObject.put("email", s.getEmail());
-        jsonObject.put("legajo", s.getLegajo());
+    private String exportar(Socio socio) {
+		JSONObject jsonObject = new JSONObject();
+        jsonObject.put("nombre", socio.getNombre());
+        jsonObject.put("email", socio.getEmail());
+        jsonObject.put("legajo", socio.getLegajo());
         return jsonObject.toJSONString();
-    }
-
+	}
+    
+    @Override
     public String exportar(List<Socio> socios)
     {
         JSONArray jsonArray = new JSONArray();

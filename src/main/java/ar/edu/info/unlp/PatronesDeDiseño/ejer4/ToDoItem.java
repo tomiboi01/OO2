@@ -1,4 +1,4 @@
-package ar.edu.info.unlp.ejer4;
+package ar.edu.info.unlp.PatronesDeDiseño.ejer4;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
@@ -21,7 +21,7 @@ public class ToDoItem {
         this.comments = new ArrayList<>();
     }
 
-    public void setState(ToDoItemState state)
+    void setState(ToDoItemState state)
     {
         this.state = state;
     }
@@ -66,7 +66,7 @@ public class ToDoItem {
 */
     public Duration workedTime()
     {
-        return state.workedTime(this, startTime, endTime);
+        return state.workedTime(this);
     }
 /**
 * Agrega un comentario al ToDoItem siempre y cuando no haya finalizado. Caso
@@ -81,11 +81,25 @@ public class ToDoItem {
     return false;
     }
 
-    public void setStartTime(LocalDateTime dateTime) {
+    void setStartTime(LocalDateTime dateTime) {
     this.startTime = dateTime;
     }
 
-    public void setEndTime(LocalDateTime dateTime) {
+    void setEndTime(LocalDateTime dateTime) {
         this.endTime = dateTime;
+    }
+
+
+    public LocalDateTime getEndTime() {
+        return endTime;
+    }
+
+    public LocalDateTime getStartTime() {
+        return startTime;
+    }
+
+    Duration getWorkedTime (LocalDateTime start, LocalDateTime end)
+    {
+        return Duration.between(start, end);
     }
 }

@@ -1,9 +1,9 @@
-package ar.edu.info.unlp.ejer4;
+package ar.edu.info.unlp.PatronesDeDiseño.ejer4;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
 
-public class PendingState implements ToDoItemState{
+public class PendingState extends ToDoItemState{
 
     @Override
     public void handleStart(ToDoItem toDoItem) {
@@ -20,15 +20,12 @@ public class PendingState implements ToDoItemState{
       }
 
     @Override
-    public Duration workedTime(ToDoItem toDoItem, LocalDateTime fechaDeInicio, LocalDateTime fechaDeFin) {
+    public Duration workedTime(ToDoItem toDoItem) {
         throw new RuntimeException("El objeto ToDoItem no se inició"); }
 
-    @Override
-    public boolean puedeAgregarComentario() {
-        return true; 
+   
 }
     
 
     
 
-}

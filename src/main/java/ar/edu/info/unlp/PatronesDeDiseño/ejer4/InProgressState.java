@@ -1,17 +1,15 @@
-package ar.edu.info.unlp.ejer4;
+package ar.edu.info.unlp.PatronesDeDiseño.ejer4;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
 
-public class InProgressState implements ToDoItemState{
+public class InProgressState extends ToDoItemState{
     public InProgressState()
     {
         
     }
 
-    @Override
-    public void handleStart(ToDoItem toDoItem) {
-      }
+   
 
     @Override
     public void togglePause(ToDoItem toDoItem) {
@@ -25,10 +23,10 @@ public class InProgressState implements ToDoItemState{
 
 
     @Override
-    public Duration workedTime(ToDoItem toDoItem, LocalDateTime fechaDeInicio, LocalDateTime fechaDeFin) {
+    public Duration workedTime(ToDoItem toDoItem) {
         LocalDateTime fechaDeFinalizacion = LocalDateTime.now();
         toDoItem.setEndTime(fechaDeFinalizacion);
-        return Duration.between(fechaDeInicio, fechaDeFinalizacion);
+        return toDoItem.getWorkedTime(toDoItem.getStartTime(), fechaDeFinalizacion);
     }
 
     @Override
