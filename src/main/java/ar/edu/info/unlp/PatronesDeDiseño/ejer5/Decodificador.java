@@ -22,6 +22,6 @@ public class Decodificador {
 
     public void sugerir()
     {
-        this.strategy.sugerir(this.peliculas.stream().filter(p -> !this.peliculasVistas.contains(p)).toList());
+        this.strategy.sugerir(this.peliculas.stream().filter(p -> !this.peliculasVistas.contains(p)).toList(), this.peliculasVistas);
     }
 }

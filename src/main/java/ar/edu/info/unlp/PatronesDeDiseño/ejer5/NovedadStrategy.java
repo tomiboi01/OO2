@@ -3,7 +3,6 @@ package ar.edu.info.unlp.PatronesDeDiseño.ejer5;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-import java.util.stream.Stream;
 
 public class NovedadStrategy implements Strategy {
 
