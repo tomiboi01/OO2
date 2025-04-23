@@ -21,12 +21,16 @@ public abstract class FileSystemElement {
      * filesystem 
      */
     public abstract Archivo archivoMasGrande();
+
+      public abstract Archivo archivoMasGrande2();
   
     /**
      * Retorna el archivo con fecha de creación más reciente en cualquier nivel 
      * del filesystem
      */
     public abstract Archivo archivoMasNuevo();
+
+    public abstract Archivo archivoMasNuevo2();
   
     /**
      * Retorna el primer elemento con el nombre solicitado contenido en cualquier

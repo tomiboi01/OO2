@@ -61,7 +61,7 @@ public class FileSystemElementTest {
 
     @Test
     public void testArchivoMasNuevo() {
-        assertEquals(file3, folder3.archivoMasNuevo());
+        assertEquals(file1, folder3.archivoMasNuevo2());
 
     }
 

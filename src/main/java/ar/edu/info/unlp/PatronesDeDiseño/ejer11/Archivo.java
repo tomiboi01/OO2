@@ -48,4 +48,15 @@ public class Archivo extends FileSystemElement{
         return this.nombre+"\r\n";
     }
 
+    @Override
+    public Archivo archivoMasGrande2() {
+    
+        return this;
+    }
+
+    @Override
+    public Archivo archivoMasNuevo2() {
+        return this;
+    }
+
 }

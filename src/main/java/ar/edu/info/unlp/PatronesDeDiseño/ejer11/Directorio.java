@@ -35,7 +35,7 @@ public class Directorio extends FileSystemElement{
         Archivo archivoMax = null;
         int tamañoMax = Integer.MIN_VALUE;
         for (FileSystemElement elemento : this.elementos) {
-            Archivo archivo = elemento.archivoMasGrande();
+            Archivo archivo = elemento.archivoMasGrande2();
             if (archivo != null && archivo.tamanoTotalOcupado() > tamañoMax) {
                 tamañoMax = archivo.tamanoTotalOcupado();
                 archivoMax = archivo;
@@ -49,9 +49,23 @@ public class Directorio extends FileSystemElement{
         return this.elementos.stream()
                 .map(e -> e.archivoMasNuevo())
                 .filter(a -> a != null)
-                .max(new ComparadorFechaElemento())
+                .min(new ComparadorFechaElemento())
                 .orElse(null);
         }
+
+    public Archivo archivoMasNuevo2()
+    {
+        Archivo archivoMin = null;
+        LocalDate fechaMin = LocalDate.MAX;
+        for (FileSystemElement elemento : this.elementos) {
+            Archivo archivo = elemento.archivoMasNuevo2();
+            if (archivo != null && archivo.getFechaCreacion().isBefore(fechaMin)) {
+                fechaMin = archivo.getFechaCreacion();
+                archivoMin = archivo;
+            }
+        }
+        return archivoMin;
+    }
     
     // private Archivo archivoComparadoPor(Comparator<FileSystemElement> comparador) {
     //     return this.elementos.stream()
