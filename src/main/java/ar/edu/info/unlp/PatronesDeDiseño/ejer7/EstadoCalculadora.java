@@ -8,14 +8,9 @@ public abstract class EstadoCalculadora {
     public EstadoCalculadora(Calculadora calculadora) {
         this.calculadora = calculadora;
     }
-   
-     public void operar()
-     {
-        this.calculadora.setEstadoCalculadora(new EstadoError(this.calculadora));
-     }
+    public abstract void operar();
 
     public String resultado() {
         return this.calculadora.getValor();
 }
-
 }

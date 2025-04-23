@@ -17,6 +17,10 @@ public class EstadoError extends EstadoCalculadora{
         return "Error en la operación";
     }
 
+    @Override
+    public void operar()
+    {
+    }
     
 
 
