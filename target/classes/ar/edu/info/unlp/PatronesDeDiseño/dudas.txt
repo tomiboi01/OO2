@@ -1,0 +1,3 @@
+ejer 13
+    - preguntar que hacer para construir sanguches que no necesitan todos los pasos, 
+    se deja vacío el método en el builder, o se encarga el director. 

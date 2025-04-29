@@ -9,6 +9,10 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import ar.edu.info.unlp.PatronesDeDiseño.ejer12.Archivo;
+import ar.edu.info.unlp.PatronesDeDiseño.ejer12.Directorio;
+import ar.edu.info.unlp.PatronesDeDiseño.ejer12.FileSystemElement;
+
 public class FileSystemElementTest {
     private FileSystemElement file1;
     private FileSystemElement file2;
