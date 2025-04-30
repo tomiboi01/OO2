@@ -6,6 +6,7 @@ public class TestPrenda {
     private Prenda prenda1;
     private Prenda prenda2;
     private PrendaCombinada prenda3;
+    private Prenda prenda4;
 
     @BeforeEach
     public void setUp()
@@ -15,20 +16,21 @@ public class TestPrenda {
         prenda3 = new PrendaCombinada();
         prenda3.agregarPrenda(prenda1);
         prenda3.agregarPrenda(prenda2);
+        prenda4 = prenda3;
 
     }
 
     @Test
     public void testValorPrenda1() {
-        assertEquals(15000, prenda1.getValor(), 0.01);
+        assertEquals(8000, prenda1.getValorPrendario(), 0.01);
     }
     @Test
     public void testValorPrenda2() {
-        assertEquals(50000, prenda2.getValor(), 0.01);
+        assertEquals(25000, prenda2.getValorPrendario(), 0.01);
     }
     @Test
     public void testValorPrenda3() {
-        assertEquals(65000, prenda3.getValor(), 0.01);
+        assertEquals(30000, prenda4.getValorPrendario(), 0.01);
     }
     
 }
