@@ -9,7 +9,7 @@ public abstract class Builder {
     }
 
     public abstract void buildProc();
-    public abstract void buildRAM();
+    public abstract void buildRam();
     public abstract void buildGrafica();
     public abstract void buildDisco();
     public abstract void buildGabinete();

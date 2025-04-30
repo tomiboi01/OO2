@@ -13,7 +13,7 @@ public class BuilderBasico extends Builder {
     }
 
     @Override
-    public void buildRAM() {
+    public void buildRam() {
         equipo.setRam(Catalogo.getComponente("RAM 8 GB"));}
 
     @Override
