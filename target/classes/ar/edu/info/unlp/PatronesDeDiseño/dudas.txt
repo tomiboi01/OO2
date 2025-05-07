@@ -2,7 +2,10 @@ ejer 13
     - preguntar que hacer para construir sanguches que no necesitan todos los pasos, 
     se deja vacío el método en el builder, o se encarga el director. 
     - solo usar setters para construir el producto?
-    - hacer lista de componentes?
+    - hacer lista de componentes? se
 ejer 17
     - como hago para verificar que un usuario tiene acceso, 
     sería necesario mandar por parámetro el usuario? eso rompería el protocolo
+ejer19
+    - Hacer una clase para las variantes en C de minimo, maximo y promedio?
+    - interfaz weatherdata, se usa para algo?
