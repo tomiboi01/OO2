@@ -1,4 +1,4 @@
-package ar.edu.unlp.oo2.persitencia;
+package ar.edu.info.unlp.PatronesDeDiseño.ejer23.src.main.persistencia;
 
 import java.io.FileReader;
 import java.util.List;

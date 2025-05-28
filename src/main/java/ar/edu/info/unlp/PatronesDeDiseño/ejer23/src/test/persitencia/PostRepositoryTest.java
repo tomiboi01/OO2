@@ -1,4 +1,5 @@
-package ar.edu.info.unlp.PatronesDeDiseño.ejer23.persitencia;
+package ar.edu.info.unlp.PatronesDeDiseño.ejer23.src.test.persitencia;
+
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
