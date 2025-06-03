@@ -14,5 +14,13 @@ public class PrestamoSimple extends Prestamo{
     }
 
     
+
+    @Override
+    public double getValorDeSellado()
+    {
+        return 5000;
+    }
+
+    
     
 }

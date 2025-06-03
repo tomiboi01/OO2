@@ -53,5 +53,13 @@ public abstract class Prestamo {
     public int getCuotasPagadas() {
         return this.cuotasPagadas;
     }
+
+    public abstract double getValorDeSellado();
+
+    public double getGastosAdminstrativo() {
+        return this.getMontoRestante() * 0.1; 
+        
+    }
+        
     
 }

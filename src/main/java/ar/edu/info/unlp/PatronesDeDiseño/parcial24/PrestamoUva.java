@@ -9,5 +9,10 @@ public class PrestamoUva extends Prestamo{
     public double getTasaDeInteres() {
         return indiceActual;
     }
+    @Override
+    public double getValorDeSellado() {
+        return 0;
+     }
+
     
 }

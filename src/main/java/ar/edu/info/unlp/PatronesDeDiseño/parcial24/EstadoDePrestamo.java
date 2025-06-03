@@ -6,5 +6,5 @@ public abstract class EstadoDePrestamo {
         this.prestamo = prestamo;
     }
     public abstract void pagar();
-    public abstract void gastosDeCancelacion();
+    public abstract double gastosDeCancelacion();
 }

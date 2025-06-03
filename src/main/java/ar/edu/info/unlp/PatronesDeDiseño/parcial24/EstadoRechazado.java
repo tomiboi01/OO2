@@ -12,8 +12,8 @@ public class EstadoRechazado extends EstadoDePrestamo {
     }
 
     @Override
-    public void gastosDeCancelacion() {
-        throw new UnsupportedOperationException("No se pueden aplicar gastos de cancelación a un préstamo rechazado.");
+    public double gastosDeCancelacion() {
+         //throw new Error("No se puede calcular los gatos de cancelación un préstamo finalizado.");}
+        return 0;
     }
-
 }

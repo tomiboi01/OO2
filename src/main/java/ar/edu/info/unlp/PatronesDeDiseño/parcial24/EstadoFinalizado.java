@@ -12,9 +12,7 @@ public class EstadoFinalizado extends EstadoDePrestamo {
     }
 
     @Override
-    public void gastosDeCancelacion() {
-        // No hay gastos de cancelación en un préstamo finalizado
-        throw new UnsupportedOperationException("No hay gastos de cancelación en un préstamo finalizado.");
-    }
+    public double gastosDeCancelacion() {
+        return 0; }
 
 }

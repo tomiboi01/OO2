@@ -14,9 +14,16 @@ public class EstadoAceptado extends EstadoDePrestamo {
         if (prestamo.getCuotasPagadas() == prestamo.cuotas) {
             prestamo.setEstado(new EstadoFinalizado(prestamo));
         }
+    }
+
+    //Template method
 
     @Override
-    public void gastosDeCancelacion() {
+    public double gastosDeCancelacion() {
+        return this.prestamo.getMontoRestante() + prestamo.getGastosAdminstrativo() + prestamo.getValorDeSellado();
+
     }
+
+
 
 }

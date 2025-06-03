@@ -1,0 +1,104 @@
+original 
+
+public class GestorNumerosDisponibles {
+	private SortedSet<String> lineas = new TreeSet<String>();
+	private String tipoGenerador = "ultimo";
+
+	public SortedSet<String> getLineas() {
+		return lineas;
+	}
+
+	public String obtenerNumeroLibre() {
+		String linea;
+		switch (tipoGenerador) {
+			case "ultimo":
+				linea = lineas.last();
+				lineas.remove(linea);
+				return linea;
+			case "primero":
+				linea = lineas.first();
+				lineas.remove(linea);
+				return linea;
+			case "random":
+				linea = new ArrayList<String>(lineas)
+						.get(new Random().nextInt(lineas.size()));
+				lineas.remove(linea);
+				return linea;
+		}
+		return null;
+	}
+
+	public void cambiarTipoGenerador(String valor) {
+		this.tipoGenerador = valor;
+	}
+}
+
+
+Bad smell = Switch statement
+Solución = Replace Conditional logic with strategy
+Paso 1. Creo la interfaz GeneradorStrategy
+
+public interface GeneradorStrategy {
+}
+
+Paso 2. Creo las clases que implementarán el estrategy
+public class LifoStrategy implements GeneradorStrategy
+{
+
+}
+public class FifoStrategy implements GeneradorStrategy
+{
+
+}
+public class RandomStrategy implements GeneradorStrategy
+{
+
+}
+
+Paso 3. Hago extract y move method a las subclases y reimplemento 
+con la implementación correspondiente a cada estrategia
+
+public class LifoStrategy implements GeneradorStrategy
+{
+    public String obtenerNumeroLibre(SortedSet<String> lineas) {
+        linea = lineas.last();
+		lineas.remove(linea);
+		return linea;
+    }
+}
+
+public class FifoStrategy implements GeneradorStrategy
+{
+    public String obtenerNumeroLibre(SortedSet<String> lineas) {
+        linea = lineas.first();
+		lineas.remove(linea);
+		return linea;
+    }
+}
+
+public class RandomStrategy implements GeneradorStrategy
+{
+    public String obtenerNumeroLibre(SortedSet<String> lineas) {
+        linea = new ArrayList<String>(lineas)
+				.get(new Random()
+                .nextInt(lineas.size()));
+		lineas.remove(linea);
+		return linea;
+    }
+}
+
+Hago pull up method
+
+public interface GeneradorStrategy {
+    public String obtenerNumeroLibre(SortedSet<String> lineas)
+}
+
+Reemplazo el tipo de la estrategia en la clase contexto
+
+
+private GeneradorStrategy tipoGenerador = new LifoStrategy();
+
+
+
+
+
