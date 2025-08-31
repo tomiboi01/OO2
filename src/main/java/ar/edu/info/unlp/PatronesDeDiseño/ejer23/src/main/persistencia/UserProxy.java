@@ -18,6 +18,7 @@ public class UserProxy extends User {
         } 
         else 
             return super.getPosts();
+        System.out.println("Cargando posts de " + this.getUsername() + " desde la base de datos...");
         
     }
 }
